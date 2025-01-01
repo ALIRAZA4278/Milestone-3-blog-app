@@ -1,4 +1,3 @@
-// pages/api/comment.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import { client } from '@/sanity/lib/client';
 
@@ -16,7 +15,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const { name, email, comment, post }: CommentData = JSON.parse(req.body);
 
-      const createdComment = await client.create({
+      // Create the comment in Sanity, but we no longer need to store the result.
+      await client.create({
         _type: 'comment',
         name,
         email,
@@ -27,11 +27,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
       });
 
+      // Respond with a success message
       res.status(200).json({ message: 'Comment submitted successfully!' });
     } catch (error) {
-      res.status(500).json({ message: 'Failed to submit the comment' });
+      // Log the error to help with debugging
+      console.error('Error submitting comment:', error);
+
+      // Respond with an error message
+      res.status(500).json({ message: 'Failed to submit the comment right now' });
     }
   } else {
+    // Handle other HTTP methods
     res.status(405).json({ message: 'Method not allowed' });
   }
 }

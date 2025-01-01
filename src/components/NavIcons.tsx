@@ -2,15 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-
 const NavIcons = () => {
- 
-
-
- 
- 
 
   return (
     <div className="flex items-center gap-4 xl:gap-6 relative">
