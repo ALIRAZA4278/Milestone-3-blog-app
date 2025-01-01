@@ -4,20 +4,15 @@ import { urlForImage } from '@/sanity/lib/image';
 import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 
-export const revalidate = 10; // seconds
-
 // Define the type for the component props
-interface PostPageProps {
-  params: {
-    slug: string;
-  };
+interface PageProps {
+  params: Promise<{ slug: string }>;  // Making params a Promise
 }
 
 // PostPage component with proper type annotation for props
-// The function is async so we can wait for params
-export default async function PostPage({ params }: PostPageProps) {
-  // Await the params as it is a promise
-  const { slug } = await params;
+export default async function PostPage({ params }: PageProps) {
+  // Await the params if it's a Promise
+  const { slug } = await params;  // await the Promise
 
   const query = `*[_type == 'post' && slug.current == "${slug}"] {
     title,
