@@ -7,7 +7,7 @@ import Image from 'next/image';
 export const revalidate = 10; // seconds
 
 // Define the type for the component props
-interface PageProps {
+interface PostPageProps {
   params: {
     slug: string;
   };
@@ -15,7 +15,7 @@ interface PageProps {
 
 // PostPage component with proper type annotation for props
 // The function is async so we can wait for params
-export default async function PostPage({ params }: PageProps) {
+export default async function PostPage({ params }: PostPageProps) {
   // Await the params as it is a promise
   const { slug } = await params;
 
@@ -57,7 +57,6 @@ export default async function PostPage({ params }: PageProps) {
           alt="Featured image"
           className="w-full h-full object-cover rounded-lg shadow-xl"
           fill
-          
         />
       </div>
 
