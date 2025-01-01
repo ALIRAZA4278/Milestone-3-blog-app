@@ -1,8 +1,8 @@
 import BlogCard from "@/components/BlogCard"
 import { client } from "@/sanity/lib/client"
 import Link from "next/link"
-import About from "./About"
-import Contact from "./Contact"
+import About from "../components/About"
+import Contact from "../components/Contact"
 
 export const revalidate = 10 // seconds
 

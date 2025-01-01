@@ -34,7 +34,7 @@ export default function CommentForm({ postId }: CommentFormProps) {
       setName('');
       setEmail('');
       setComment('');
-    } catch (err) {
+    } catch {
       setError('Failed to submit the comment');
     } finally {
       setIsSubmitting(false);

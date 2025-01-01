@@ -1,7 +1,8 @@
-import CommentForm from '@/app/CommentForm';
+import CommentForm from '@/components/CommentForm';
 import { client } from '@/sanity/lib/client';
 import { urlForImage } from '@/sanity/lib/image';
 import { PortableText } from '@portabletext/react';
+import Image from 'next/image';
 
 export const revalidate = 10; // seconds
 
@@ -51,7 +52,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
       {/* Featured Image */}
       <div className="relative w-full h-80 sm:h-96 mb-8 rounded-lg overflow-hidden">
-        <img
+        <Image
           src={urlForImage(post.image).url()}
           alt="Featured image"
           className="w-full h-full object-cover rounded-lg shadow-xl"

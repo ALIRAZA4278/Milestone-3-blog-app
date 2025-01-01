@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto space-y-8">
           <h1 className="text-4xl font-semibold text-gray-800 text-center">Contact Us</h1>
           <p className="text-lg text-gray-700 text-center">
-            We'd love to hear from you! Whether you have a question, feedback, or just want to say hi, feel free to reach out.
+            We&apos;d love to hear from you! Whether you have a question, feedback, or just want to say hi, feel free to reach out.
           </p>
 
           {/* Contact Form */}
@@ -70,7 +70,7 @@ const Contact = () => {
           <div className="bg-white p-8 rounded-lg shadow-md w-full">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Alternatively</h2>
             <p className="text-lg text-gray-700 mb-4">
-              If you'd prefer to reach us through social media or email, you can contact us using the details below:
+              If you did prefer to reach us through social media or email you can contact us using the details below:
             </p>
             <div className="space-y-4">
               <Link href="#">
@@ -88,7 +88,7 @@ const Contact = () => {
       </div>
       
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -1,22 +1,22 @@
-import Link from "next/link"
+import Link from "next/link";
 
 const About = () => {
   return (
     <div className="bg-gray-100 font-sans text-gray-900" id="About">
 
       {/* Main Content */}
-      <div className="px-6 py-12 w-full">
+      <div className="px-6 py-12">
 
         {/* About Text */}
-        <div className="space-y-6 w-full">
+        <div>
           <h1 className="text-4xl font-semibold text-gray-800">About Our Blog</h1>
           <p className="text-lg text-gray-700">
-            Welcome to our blog! We share articles, tips, and personal experiences on a variety of topics. Whether you're here for advice, inspiration, or to learn something new, we’ve got something for everyone.
+            Welcome to our blog! We share articles tips and personal experiences on a variety of topics. Whether you&apos;re here for advice inspiration or to learn something new we&rsquo;ve got something for everyone.
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-800">Our Mission</h2>
           <p className="text-lg text-gray-700">
-            Our mission is to create a platform for learning and curiosity, offering fresh perspectives and inspiring ideas to our readers.
+            Our mission is to create a platform for learning and curiosity offering fresh perspectives and inspiring ideas to our readers.
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-800">Blog Topics</h2>
@@ -28,7 +28,7 @@ const About = () => {
 
           <h2 className="text-2xl font-semibold text-gray-800">Meet the Author</h2>
           <p className="text-lg text-gray-700">
-            Hi, I’m Ali Raza, the creator behind this blog. I’m passionate about writing, technology, and travel. I started this blog to share my insights and connect with like-minded individuals.
+            Hi I&apos;m Ali Raza the creator behind this blog. I&apos;m passionate about writing technology and travel. I started this blog to share my insights and connect with like-minded individuals.
           </p>
 
           <div className="space-x-4">
@@ -54,7 +54,7 @@ const About = () => {
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
